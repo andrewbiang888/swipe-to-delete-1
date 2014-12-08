@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swipe left to delete implementation using AngularJs</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-touch.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="ngSwipeLeftExample" ng-controller="SampleSwipe">
+  <div ng-show="!showActions" ng-swipe-left="showActions = true" style="width: 400px;border: 1px solid;padding: 20px;font-size: 17px;">
+  <span ng-show="var1">Hi, You recieved new email ! Check now.</span>
+
+</div>
+<div ng-show="showActions" ng-swipe-right="showActions = false" style="width: 420px;border: 1px solid;padding: 20px;font-size: 17px;">
+   <span ng-show="var1">Hi, You recieved new email ! Check now.</span>
+  <button ng-show="var1" ng-click="delete()" style="height: 44px;width: 109px;border: 0;background-color: red;color: white;font-size: 18px;font-weight: bold;cursor:pointer;">Delete</button>
+</div><br>
+<h2>Click and drag left to see how it works</h2>
+</body>
+</html>
